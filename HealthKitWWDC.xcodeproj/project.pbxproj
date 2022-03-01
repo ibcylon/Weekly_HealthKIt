@@ -9,21 +9,40 @@
 /* Begin PBXBuildFile section */
 		D503437C27CCA01100CFED38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503437B27CCA01100CFED38 /* AppDelegate.swift */; };
 		D503437E27CCA01100CFED38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503437D27CCA01100CFED38 /* SceneDelegate.swift */; };
-		D503438027CCA01100CFED38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503437F27CCA01100CFED38 /* ViewController.swift */; };
-		D503438327CCA01100CFED38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D503438127CCA01100CFED38 /* Main.storyboard */; };
+		D503438027CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503437F27CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift */; };
 		D503438527CCA01300CFED38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D503438427CCA01300CFED38 /* Assets.xcassets */; };
 		D503438827CCA01300CFED38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D503438627CCA01300CFED38 /* LaunchScreen.storyboard */; };
+		D503439227CCA0B700CFED38 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D503439127CCA0B700CFED38 /* HealthKit.framework */; };
+		D503439627CCE4E600CFED38 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503439527CCE4E600CFED38 /* DataTableViewController.swift */; };
+		D503439927CCE57D00CFED38 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503439827CCE57D00CFED38 /* HealthDataTypeValue.swift */; };
+		D503439C27CCE72400CFED38 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503439B27CCE72400CFED38 /* DataTypeTableViewCell.swift */; };
+		D50343A027CCF3B300CFED38 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503439F27CCF3B300CFED38 /* EmptyDataBackgroundView.swift */; };
+		D50343A327CCF49600CFED38 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D50343A227CCF49600CFED38 /* Then */; };
+		D50343A627CCF4A500CFED38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D50343A527CCF4A500CFED38 /* SnapKit */; };
+		D50343A927CCF99600CFED38 /* HealthKitSupport+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343A827CCF99600CFED38 /* HealthKitSupport+String.swift */; };
+		D50343AB27CCFBB800CFED38 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AA27CCFBB800CFED38 /* HealthKitSupport.swift */; };
+		D50343AE27CCFDE100CFED38 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AD27CCFDE100CFED38 /* HealthData.swift */; };
+		D50343B027CE274B00CFED38 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AF27CE274B00CFED38 /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D503437827CCA01100CFED38 /* HealthKitWWDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitWWDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D503437B27CCA01100CFED38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D503437D27CCA01100CFED38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D503437F27CCA01100CFED38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D503438227CCA01100CFED38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D503437F27CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyQuantitySampleTableVIewController.swift; sourceTree = "<group>"; };
 		D503438427CCA01300CFED38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D503438727CCA01300CFED38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D503438927CCA01300CFED38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D503438F27CCA0B700CFED38 /* HealthKitWWDC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitWWDC.entitlements; sourceTree = "<group>"; };
+		D503439127CCA0B700CFED38 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D503439527CCE4E600CFED38 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		D503439827CCE57D00CFED38 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
+		D503439B27CCE72400CFED38 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
+		D503439F27CCF3B300CFED38 /* EmptyDataBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataBackgroundView.swift; sourceTree = "<group>"; };
+		D50343A827CCF99600CFED38 /* HealthKitSupport+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitSupport+String.swift"; sourceTree = "<group>"; };
+		D50343AA27CCFBB800CFED38 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
+		D50343AD27CCFDE100CFED38 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
+		D50343AF27CE274B00CFED38 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50343A627CCF4A500CFED38 /* SnapKit in Frameworks */,
+				D503439227CCA0B700CFED38 /* HealthKit.framework in Frameworks */,
+				D50343A327CCF49600CFED38 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +64,7 @@
 			children = (
 				D503437A27CCA01100CFED38 /* HealthKitWWDC */,
 				D503437927CCA01100CFED38 /* Products */,
+				D503439027CCA0B700CFED38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +81,93 @@
 			children = (
 				D503437B27CCA01100CFED38 /* AppDelegate.swift */,
 				D503437D27CCA01100CFED38 /* SceneDelegate.swift */,
-				D503437F27CCA01100CFED38 /* ViewController.swift */,
-				D503438127CCA01100CFED38 /* Main.storyboard */,
+				D50343AC27CCFDD200CFED38 /* Data */,
+				D503439A27CCE71200CFED38 /* Cells */,
+				D503439727CCE56400CFED38 /* Models */,
+				D503439427CCE4C700CFED38 /* Interface */,
+				D503439327CCE4B100CFED38 /* Controllers */,
+				D50343A727CCF93B00CFED38 /* Util */,
+				D503438F27CCA0B700CFED38 /* HealthKitWWDC.entitlements */,
 				D503438427CCA01300CFED38 /* Assets.xcassets */,
 				D503438627CCA01300CFED38 /* LaunchScreen.storyboard */,
 				D503438927CCA01300CFED38 /* Info.plist */,
+				D50343AF27CE274B00CFED38 /* ExampleViewController.swift */,
 			);
 			path = HealthKitWWDC;
+			sourceTree = "<group>";
+		};
+		D503439027CCA0B700CFED38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D503439127CCA0B700CFED38 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D503439327CCE4B100CFED38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D503437F27CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D503439427CCE4C700CFED38 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D503439E27CCF39900CFED38 /* TableViewController */,
+				D503439D27CCF38300CFED38 /* View */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		D503439727CCE56400CFED38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D503439827CCE57D00CFED38 /* HealthDataTypeValue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D503439A27CCE71200CFED38 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D503439B27CCE72400CFED38 /* DataTypeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D503439D27CCF38300CFED38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D503439F27CCF3B300CFED38 /* EmptyDataBackgroundView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D503439E27CCF39900CFED38 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D503439527CCE4E600CFED38 /* DataTableViewController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		D50343A727CCF93B00CFED38 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D50343A827CCF99600CFED38 /* HealthKitSupport+String.swift */,
+				D50343AA27CCFBB800CFED38 /* HealthKitSupport.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D50343AC27CCFDD200CFED38 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D50343AD27CCFDE100CFED38 /* HealthData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +186,10 @@
 			dependencies = (
 			);
 			name = HealthKitWWDC;
+			packageProductDependencies = (
+				D50343A227CCF49600CFED38 /* Then */,
+				D50343A527CCF4A500CFED38 /* SnapKit */,
+			);
 			productName = HealthKitWWDC;
 			productReference = D503437827CCA01100CFED38 /* HealthKitWWDC.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +218,10 @@
 				Base,
 			);
 			mainGroup = D503436F27CCA01100CFED38;
+			packageReferences = (
+				D50343A127CCF49600CFED38 /* XCRemoteSwiftPackageReference "Then" */,
+				D50343A427CCF4A500CFED38 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D503437927CCA01100CFED38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +238,6 @@
 			files = (
 				D503438827CCA01300CFED38 /* LaunchScreen.storyboard in Resources */,
 				D503438527CCA01300CFED38 /* Assets.xcassets in Resources */,
-				D503438327CCA01100CFED38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +248,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D503438027CCA01100CFED38 /* ViewController.swift in Sources */,
+				D503439927CCE57D00CFED38 /* HealthDataTypeValue.swift in Sources */,
+				D50343AE27CCFDE100CFED38 /* HealthData.swift in Sources */,
+				D503438027CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift in Sources */,
+				D50343B027CE274B00CFED38 /* ExampleViewController.swift in Sources */,
+				D503439627CCE4E600CFED38 /* DataTableViewController.swift in Sources */,
+				D50343AB27CCFBB800CFED38 /* HealthKitSupport.swift in Sources */,
 				D503437C27CCA01100CFED38 /* AppDelegate.swift in Sources */,
 				D503437E27CCA01100CFED38 /* SceneDelegate.swift in Sources */,
+				D50343A927CCF99600CFED38 /* HealthKitSupport+String.swift in Sources */,
+				D503439C27CCE72400CFED38 /* DataTypeTableViewCell.swift in Sources */,
+				D50343A027CCF3B300CFED38 /* EmptyDataBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D503438127CCA01100CFED38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D503438227CCA01100CFED38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D503438627CCA01300CFED38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitWWDC/HealthKitWWDC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SJDR485DTV;
@@ -315,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitWWDC/HealthKitWWDC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SJDR485DTV;
@@ -360,6 +472,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D50343A127CCF49600CFED38 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		D50343A427CCF4A500CFED38 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D50343A227CCF49600CFED38 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D50343A127CCF49600CFED38 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		D50343A527CCF4A500CFED38 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D50343A427CCF4A500CFED38 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D503437027CCA01100CFED38 /* Project object */;
 }
