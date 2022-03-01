@@ -2,17 +2,20 @@
 import UIKit
 import HealthKit
 
-class ReadViewController: UITableViewController {
+final class ReadViewController: UITableViewController {
 
     static let cellIdentifier = "DataTypeTableViewCell"
     
     var healthStore: HKHealthStore?
     let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
-    var query: HKStatisticsCollectionQuery?
 
+    var query: HKStatisticsCollectionQuery?
     var dataValues: [HKStatistics] = []
+
     let numberformatter: NumberFormatter = NumberFormatter()
     let dateFormatter: DateFormatter = DateFormatter()
+
+    // MARK: UI
 
     init() {
         super.init(style: .insetGrouped)
@@ -27,21 +30,20 @@ class ReadViewController: UITableViewController {
 
         dateFormatter.dateFormat = "EE, yy년 MM월 dd일"
         dateFormatter.locale = Locale(identifier: "ko-kr")
+
         numberformatter.numberStyle = .decimal
 
         title = "Step Count"
 
         setUpNavigationController()
         setUpTableView()
-
     }
-
 
     func setUpNavigationController() {
         navigationController?.navigationBar.prefersLargeTitles = true
 
         // The Add Data bar button item.
-        let rightBarButtonItem = UIBarButtonItem(title: "Add Data", style: .plain, target: self,
+        let rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self,
                                                  action: #selector(didTapRightBarButtonItem))
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
@@ -53,7 +55,7 @@ class ReadViewController: UITableViewController {
 
     private func presentManualEntryViewController() {
         let title = "Step Count"
-        let message = "Enter a value to add as a sample to your health data."
+        let message = "오늘 걸음 수를 추가해보세요."
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         alertController.addTextField { textField in
@@ -76,12 +78,16 @@ class ReadViewController: UITableViewController {
         present(alertController, animated: true)
     }
 
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         isHealthDataAvaliable()
     }
 
+    // MARK: HealthKtt
+
+    // 기기 가능 여부
     func isHealthDataAvaliable() {
         
         if HKHealthStore.isHealthDataAvailable() {
@@ -98,10 +104,10 @@ class ReadViewController: UITableViewController {
         }
     }
 
-    // Step Count를 저장한다.
+    // 권한 요청
     func requestWalkAuthorization() {
 
-        // 권한 요청
+        // 읽기 쓰기 권한 요청
         healthStore?.requestAuthorization(toShare: [stepType], read: [stepType]) { success, error in
 
             if success {
@@ -113,6 +119,7 @@ class ReadViewController: UITableViewController {
         }
     }
 
+    // 지난 주 데이터 fetch
     func calculateDailyStepCountForPastWeek() {
         let calendar: Calendar = .current
         var anchorComponents = calendar.dateComponents([.day, .month, .year, .weekday], from: Date())
@@ -155,6 +162,7 @@ class ReadViewController: UITableViewController {
     }
 
     func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection) {
+
         DispatchQueue.main.async {
             self.dataValues = []
 
@@ -165,6 +173,9 @@ class ReadViewController: UITableViewController {
             statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { [weak self] statistics, stop in
 
                 self?.dataValues.append(statistics)
+                self?.dataValues.sort(by: { first, last in
+                    first.startDate > last.startDate
+                })
             }
 
             self.tableView.reloadData()
@@ -179,25 +190,28 @@ class ReadViewController: UITableViewController {
 
 extension ReadViewController {
 
-
+    // MARK : TableView setting 관련
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataValues.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Self.cellIdentifier) as? DataTypeTableViewCell
         else {
             return DataTypeTableViewCell()
         }
 
         let dataValue = dataValues[indexPath.row]
+
         let quantity = dataValue.sumQuantity()
         let value = quantity?.doubleValue(for: .count()) ?? 0
         let numberValue = NSNumber(value: value)
-        var content = cell.defaultContentConfiguration()
+        let formattedValue = numberformatter.string(from: numberValue) ?? "0"
 
-        content.text = "\(numberformatter.string(from: numberValue) ?? "0" ) steps"
+        var content = cell.defaultContentConfiguration()
+        content.text = formattedValue + " steps"
         content.secondaryText = dateFormatter.string(from: dataValue.startDate)
         cell.contentConfiguration = content
 
@@ -221,13 +235,17 @@ extension ReadViewController {
         tableView.register(DataTypeTableViewCell.self, forCellReuseIdentifier: Self.cellIdentifier)
     }
 
+    // 추가
     func didAddNewData(with value: Double) {
         let sampleType: HKQuantityType = stepType
         let unit: HKUnit = .count()
 
         let quantity = HKQuantity(unit: unit, doubleValue: value)
         let quantitySample = HKQuantitySample(type: sampleType,
-                                              quantity: quantity, start: .now, end: .now)
+                                              quantity: quantity,
+                                              start: .now,
+                                              end: .now)
+
         healthStore?.save(quantitySample, withCompletion: { success, error in
 
             if success {

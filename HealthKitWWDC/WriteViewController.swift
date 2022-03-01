@@ -6,6 +6,8 @@ import UIKit
 final class HealthDataManager {
 
     static let healthStore: HKHealthStore = HKHealthStore()
+
+    private init() {}
 }
 
 
