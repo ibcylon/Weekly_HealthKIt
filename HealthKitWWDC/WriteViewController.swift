@@ -1,8 +1,15 @@
+//WriteExample
 
 import HealthKit
 import UIKit
 
-class ExampleViewController: UIViewController {
+final class HealthDataManager {
+
+    static let healthStore: HKHealthStore = HKHealthStore()
+}
+
+
+final class WriteViewController: UIViewController {
 
     var healthStore: HKHealthStore?
     let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
@@ -17,7 +24,7 @@ class ExampleViewController: UIViewController {
 
             print("지원 함")
 
-            healthStore = HKHealthStore()
+            healthStore = HealthDataManager.healthStore
 
             requestWalkAuthorization()
 
@@ -27,7 +34,6 @@ class ExampleViewController: UIViewController {
         }
     }
 
-    // 걸음 걸이를 저장한다.
     func requestWalkAuthorization() {
 
         // 권한 요청

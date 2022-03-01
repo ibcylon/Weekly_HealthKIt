@@ -22,8 +22,8 @@
 		D50343A927CCF99600CFED38 /* HealthKitSupport+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343A827CCF99600CFED38 /* HealthKitSupport+String.swift */; };
 		D50343AB27CCFBB800CFED38 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AA27CCFBB800CFED38 /* HealthKitSupport.swift */; };
 		D50343AE27CCFDE100CFED38 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AD27CCFDE100CFED38 /* HealthData.swift */; };
-		D50343B027CE274B00CFED38 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AF27CE274B00CFED38 /* ExampleViewController.swift */; };
-		D50343B227CE46BD00CFED38 /* Example2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343B127CE46BD00CFED38 /* Example2ViewController.swift */; };
+		D50343B027CE274B00CFED38 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AF27CE274B00CFED38 /* WriteViewController.swift */; };
+		D50343B227CE46BD00CFED38 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343B127CE46BD00CFED38 /* ReadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,8 @@
 		D50343A827CCF99600CFED38 /* HealthKitSupport+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthKitSupport+String.swift"; sourceTree = "<group>"; };
 		D50343AA27CCFBB800CFED38 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
 		D50343AD27CCFDE100CFED38 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
-		D50343AF27CE274B00CFED38 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		D50343B127CE46BD00CFED38 /* Example2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2ViewController.swift; sourceTree = "<group>"; };
+		D50343AF27CE274B00CFED38 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		D50343B127CE46BD00CFED38 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 				D503438427CCA01300CFED38 /* Assets.xcassets */,
 				D503438627CCA01300CFED38 /* LaunchScreen.storyboard */,
 				D503438927CCA01300CFED38 /* Info.plist */,
-				D50343AF27CE274B00CFED38 /* ExampleViewController.swift */,
-				D50343B127CE46BD00CFED38 /* Example2ViewController.swift */,
+				D50343AF27CE274B00CFED38 /* WriteViewController.swift */,
+				D50343B127CE46BD00CFED38 /* ReadViewController.swift */,
 			);
 			path = HealthKitWWDC;
 			sourceTree = "<group>";
@@ -254,12 +254,12 @@
 				D503439927CCE57D00CFED38 /* HealthDataTypeValue.swift in Sources */,
 				D50343AE27CCFDE100CFED38 /* HealthData.swift in Sources */,
 				D503438027CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift in Sources */,
-				D50343B027CE274B00CFED38 /* ExampleViewController.swift in Sources */,
+				D50343B027CE274B00CFED38 /* WriteViewController.swift in Sources */,
 				D503439627CCE4E600CFED38 /* DataTableViewController.swift in Sources */,
 				D50343AB27CCFBB800CFED38 /* HealthKitSupport.swift in Sources */,
 				D503437C27CCA01100CFED38 /* AppDelegate.swift in Sources */,
 				D503437E27CCA01100CFED38 /* SceneDelegate.swift in Sources */,
-				D50343B227CE46BD00CFED38 /* Example2ViewController.swift in Sources */,
+				D50343B227CE46BD00CFED38 /* ReadViewController.swift in Sources */,
 				D50343A927CCF99600CFED38 /* HealthKitSupport+String.swift in Sources */,
 				D503439C27CCE72400CFED38 /* DataTypeTableViewCell.swift in Sources */,
 				D50343A027CCF3B300CFED38 /* EmptyDataBackgroundView.swift in Sources */,
@@ -407,9 +407,11 @@
 				DEVELOPMENT_TEAM = SJDR485DTV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthKitWWDC/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "앱 기능을 위해 건강 정보를 기록합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱 기능을 위해 건강 정보를 공유합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "앱 기능을 위해 건강 정보를 업데이트합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -421,7 +423,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,9 +438,11 @@
 				DEVELOPMENT_TEAM = SJDR485DTV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthKitWWDC/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "앱 기능을 위해 건강 정보를 기록합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱 기능을 위해 건강 정보를 공유합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "앱 기능을 위해 건강 정보를 업데이트합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,7 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
