@@ -7,6 +7,8 @@ final class ReadViewController: UITableViewController {
     static let cellIdentifier = "DataTypeTableViewCell"
     
     var healthStore: HKHealthStore?
+
+    // Quantity 타입
     let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
 
     var query: HKStatisticsCollectionQuery?
@@ -173,6 +175,7 @@ final class ReadViewController: UITableViewController {
             statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { [weak self] statistics, stop in
 
                 self?.dataValues.append(statistics)
+
                 self?.dataValues.sort(by: { first, last in
                     first.startDate > last.startDate
                 })
@@ -205,6 +208,7 @@ extension ReadViewController {
 
         let dataValue = dataValues[indexPath.row]
 
+        // statistics에서 value 추출
         let quantity = dataValue.sumQuantity()
         let value = quantity?.doubleValue(for: .count()) ?? 0
         let numberValue = NSNumber(value: value)
