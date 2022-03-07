@@ -30,4 +30,7 @@ final class UserManager {
 
     @UserDefault(key: "lastSelectedTab", defaultValue: 0)
     static var lastSelectedTab: Int
+
+    @UserDefault(key: "anchor", defaultValue: nil)
+    static var anchor: Data?
 }

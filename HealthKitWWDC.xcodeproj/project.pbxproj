@@ -27,6 +27,12 @@
 		D5472A7C27D5027100CBCD6B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A7B27D5027100CBCD6B /* ChartViewController.swift */; };
 		D5472A7F27D5036C00CBCD6B /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A7E27D5036C00CBCD6B /* MainTabViewController.swift */; };
 		D5472A8127D5045F00CBCD6B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A8027D5045F00CBCD6B /* UserManager.swift */; };
+		D5472A8327D5A50500CBCD6B /* DataTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A8227D5A50500CBCD6B /* DataTypeCollectionViewCell.swift */; };
+		D5472A8627D5A71100CBCD6B /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5472A8527D5A71100CBCD6B /* CareKit */; };
+		D5472A8827D5A71100CBCD6B /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = D5472A8727D5A71100CBCD6B /* CareKitStore */; };
+		D5472A8A27D5A71100CBCD6B /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = D5472A8927D5A71100CBCD6B /* CareKitUI */; };
+		D5472A8C27D5A73800CBCD6B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A8B27D5A73800CBCD6B /* ChartView.swift */; };
+		D5472A8F27D63F6600CBCD6B /* WeeklyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A8E27D63F6600CBCD6B /* WeeklyReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +57,9 @@
 		D5472A7B27D5027100CBCD6B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		D5472A7E27D5036C00CBCD6B /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		D5472A8027D5045F00CBCD6B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D5472A8227D5A50500CBCD6B /* DataTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5472A8B27D5A73800CBCD6B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		D5472A8E27D63F6600CBCD6B /* WeeklyReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +69,10 @@
 			files = (
 				D50343A627CCF4A500CFED38 /* SnapKit in Frameworks */,
 				D503439227CCA0B700CFED38 /* HealthKit.framework in Frameworks */,
+				D5472A8A27D5A71100CBCD6B /* CareKitUI in Frameworks */,
+				D5472A8627D5A71100CBCD6B /* CareKit in Frameworks */,
 				D50343A327CCF49600CFED38 /* Then in Frameworks */,
+				D5472A8827D5A71100CBCD6B /* CareKitStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +113,7 @@
 				D503438927CCA01300CFED38 /* Info.plist */,
 				D50343AF27CE274B00CFED38 /* WriteViewController.swift */,
 				D50343B127CE46BD00CFED38 /* ReadViewController.swift */,
-				D5472A7B27D5027100CBCD6B /* ChartViewController.swift */,
+				D5472A8E27D63F6600CBCD6B /* WeeklyReportViewController.swift */,
 			);
 			path = HealthKitWWDC;
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 		D503439427CCE4C700CFED38 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				D5472A8D27D63F3D00CBCD6B /* CollectionVIewController */,
 				D5472A7D27D5035100CBCD6B /* TabViewController */,
 				D503439E27CCF39900CFED38 /* TableViewController */,
 				D503439D27CCF38300CFED38 /* View */,
@@ -144,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D503439B27CCE72400CFED38 /* DataTypeTableViewCell.swift */,
+				D5472A8227D5A50500CBCD6B /* DataTypeCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -152,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D503439F27CCF3B300CFED38 /* EmptyDataBackgroundView.swift */,
+				D5472A8B27D5A73800CBCD6B /* ChartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +205,14 @@
 			path = TabViewController;
 			sourceTree = "<group>";
 		};
+		D5472A8D27D63F3D00CBCD6B /* CollectionVIewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5472A7B27D5027100CBCD6B /* ChartViewController.swift */,
+			);
+			path = CollectionVIewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +232,9 @@
 			packageProductDependencies = (
 				D50343A227CCF49600CFED38 /* Then */,
 				D50343A527CCF4A500CFED38 /* SnapKit */,
+				D5472A8527D5A71100CBCD6B /* CareKit */,
+				D5472A8727D5A71100CBCD6B /* CareKitStore */,
+				D5472A8927D5A71100CBCD6B /* CareKitUI */,
 			);
 			productName = HealthKitWWDC;
 			productReference = D503437827CCA01100CFED38 /* HealthKitWWDC.app */;
@@ -241,6 +267,7 @@
 			packageReferences = (
 				D50343A127CCF49600CFED38 /* XCRemoteSwiftPackageReference "Then" */,
 				D50343A427CCF4A500CFED38 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D5472A8427D5A71100CBCD6B /* XCRemoteSwiftPackageReference "CareKit" */,
 			);
 			productRefGroup = D503437927CCA01100CFED38 /* Products */;
 			projectDirPath = "";
@@ -268,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5472A8F27D63F6600CBCD6B /* WeeklyReportViewController.swift in Sources */,
 				D503439927CCE57D00CFED38 /* HealthDataTypeValue.swift in Sources */,
 				D50343AE27CCFDE100CFED38 /* HealthData.swift in Sources */,
 				D503438027CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift in Sources */,
@@ -278,8 +306,10 @@
 				D503439627CCE4E600CFED38 /* DataTableViewController.swift in Sources */,
 				D50343AB27CCFBB800CFED38 /* HealthKitSupport.swift in Sources */,
 				D503437C27CCA01100CFED38 /* AppDelegate.swift in Sources */,
+				D5472A8C27D5A73800CBCD6B /* ChartView.swift in Sources */,
 				D503437E27CCA01100CFED38 /* SceneDelegate.swift in Sources */,
 				D50343B227CE46BD00CFED38 /* ReadViewController.swift in Sources */,
+				D5472A8327D5A50500CBCD6B /* DataTypeCollectionViewCell.swift in Sources */,
 				D50343A927CCF99600CFED38 /* HealthKitSupport+String.swift in Sources */,
 				D503439C27CCE72400CFED38 /* DataTypeTableViewCell.swift in Sources */,
 				D50343A027CCF3B300CFED38 /* EmptyDataBackgroundView.swift in Sources */,
@@ -518,6 +548,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D5472A8427D5A71100CBCD6B /* XCRemoteSwiftPackageReference "CareKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carekit-apple/CareKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -530,6 +568,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D50343A427CCF4A500CFED38 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		D5472A8527D5A71100CBCD6B /* CareKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5472A8427D5A71100CBCD6B /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKit;
+		};
+		D5472A8727D5A71100CBCD6B /* CareKitStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5472A8427D5A71100CBCD6B /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitStore;
+		};
+		D5472A8927D5A71100CBCD6B /* CareKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5472A8427D5A71100CBCD6B /* XCRemoteSwiftPackageReference "CareKit" */;
+			productName = CareKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
