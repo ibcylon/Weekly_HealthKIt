@@ -25,6 +25,8 @@
 		D50343B027CE274B00CFED38 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343AF27CE274B00CFED38 /* WriteViewController.swift */; };
 		D50343B227CE46BD00CFED38 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50343B127CE46BD00CFED38 /* ReadViewController.swift */; };
 		D5472A7C27D5027100CBCD6B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A7B27D5027100CBCD6B /* ChartViewController.swift */; };
+		D5472A7F27D5036C00CBCD6B /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A7E27D5036C00CBCD6B /* MainTabViewController.swift */; };
+		D5472A8127D5045F00CBCD6B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5472A8027D5045F00CBCD6B /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		D50343AF27CE274B00CFED38 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		D50343B127CE46BD00CFED38 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		D5472A7B27D5027100CBCD6B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		D5472A7E27D5036C00CBCD6B /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		D5472A8027D5045F00CBCD6B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,8 @@
 				D503438627CCA01300CFED38 /* LaunchScreen.storyboard */,
 				D503438927CCA01300CFED38 /* Info.plist */,
 				D50343AF27CE274B00CFED38 /* WriteViewController.swift */,
-				D5472A7B27D5027100CBCD6B /* ChartViewController.swift */,
 				D50343B127CE46BD00CFED38 /* ReadViewController.swift */,
+				D5472A7B27D5027100CBCD6B /* ChartViewController.swift */,
 			);
 			path = HealthKitWWDC;
 			sourceTree = "<group>";
@@ -121,6 +125,7 @@
 		D503439427CCE4C700CFED38 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				D5472A7D27D5035100CBCD6B /* TabViewController */,
 				D503439E27CCF39900CFED38 /* TableViewController */,
 				D503439D27CCF38300CFED38 /* View */,
 			);
@@ -164,6 +169,7 @@
 			children = (
 				D50343A827CCF99600CFED38 /* HealthKitSupport+String.swift */,
 				D50343AA27CCFBB800CFED38 /* HealthKitSupport.swift */,
+				D5472A8027D5045F00CBCD6B /* UserManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -174,6 +180,14 @@
 				D50343AD27CCFDE100CFED38 /* HealthData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		D5472A7D27D5035100CBCD6B /* TabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5472A7E27D5036C00CBCD6B /* MainTabViewController.swift */,
+			);
+			path = TabViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +271,10 @@
 				D503439927CCE57D00CFED38 /* HealthDataTypeValue.swift in Sources */,
 				D50343AE27CCFDE100CFED38 /* HealthData.swift in Sources */,
 				D503438027CCA01100CFED38 /* WeeklyQuantitySampleTableVIewController.swift in Sources */,
+				D5472A8127D5045F00CBCD6B /* UserManager.swift in Sources */,
 				D50343B027CE274B00CFED38 /* WriteViewController.swift in Sources */,
 				D5472A7C27D5027100CBCD6B /* ChartViewController.swift in Sources */,
+				D5472A7F27D5036C00CBCD6B /* MainTabViewController.swift in Sources */,
 				D503439627CCE4E600CFED38 /* DataTableViewController.swift in Sources */,
 				D50343AB27CCFBB800CFED38 /* HealthKitSupport.swift in Sources */,
 				D503437C27CCA01100CFED38 /* AppDelegate.swift in Sources */,
